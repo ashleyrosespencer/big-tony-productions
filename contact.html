@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Big Tony Productions</title>
+</head>
+
+<body class="contact">
+    <!--==================== HEADER ====================-->
+    <header>
+        <div class="img-logo">
+            <img src="assets/img/big-tony-productions-logo.png">
+            <div class="logo-text">BIG TONY PRODUCTIONS</div>
+        </div>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar"><i class="ri-menu-line"></i></label>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">PHOTOGRAPHY</a>
+                    <ul>
+                        <li><a href="star-trails.html">STAR TRAILS</a></li>
+                        <li><a href="lego.html">LEGO</a></li>
+                        <li><a href="#">TRAVEL / LOCATION<i class="ri-arrow-drop-down-line"></i></a>
+                            <ul>
+                                <li><a href="columbia-river-gorge.html">COLUMBIA RIVER GORGE</a></li>
+                                <li><a href="crater-lake.html">CRATER LAKE</a></li>
+                                <li><a href="eastern-oregon.html">EASTERN OREGON</a></li>
+                                <li><a href="oregon-coast.html">OREGON COAST</a></li>
+                                <li><a href="portland.html">PORTLAND</a></li>
+                                <li><a href="washington.html">WASHINGTON</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="multifarious.html">MULTIFARIOUS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">VIDEOGRAPHY</a>
+                    <ul>
+                        <li><a href="food.html">FOOD</a></li>
+                        <li><a href="health-and-fitness.html">HEALTH AND FITNESS</a></li>
+                        <li><a href="inspirational.html">INSPIRATIONAL</a></li>
+                        <li><a href="timelapse.html">TIMELAPSE</a></li>
+                        <li><a href="trailers.html">TRAILERS</a></li>
+                        <li><a href="travel.html">TRAVEL / MOTO VLOGS</a></li>
+                        <li><a href="wonders-in-the-mundane.html">WONDERS IN THE MUNDANE</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--==================== MAIN ====================-->
+    <main class="contact-background">
+        <div class="contact-container">
+            <form id="contact-form">
+
+                <h3 class="questions">QUESTIONS? COMMENTS?<br>JUST WANT TO SAY HELLO?</h3>
+
+                <label class="contact__form-tag">NAME <span class="red">*</span></label>
+
+                <input type="text" id="contact-name" name="user_name" placeholder="Please provide your name" required>
+
+                <label class="contact__form-tag">EMAIL <span class="red">*</span></label>
+
+                <input type="email" id="contact-email" name="user_email" placeholder="Please provide your email address"
+                    required>
+
+                <label class="contact__form-tag">MESSAGE <span class="red">*</span></label>
+
+                <textarea id="contact-message" name="user_message" rows="4" placeholder="Please provide your message"
+                    required></textarea>
+
+                <p class="messageText" id="messageText"></p>
+
+                <button type="submit" class="submit">SUBMIT</button>
+            </form>
+        </div>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer>
+        <div class="footer__container">
+            <ul class="footer__social">
+                <a href="https://www.instagram.com/bigtonyproductions/" target="_blank" class="footer__social-link">
+                    <i class="ri-instagram-line"><br>
+                        <div class="footer-text">@bigtonyproductions</div>
+                    </i>
+                </a>
+
+                <a href="https://www.instagram.com/bigtonyminifigs/" target="_blank" class="footer__social-link">
+                    <i class="ri-instagram-line"><br>
+                        <div class="footer-text">@bigtonyminifigs</div>
+                    </i>
+                </a>
+
+                <a href="https://www.youtube.com/@bigtonyproductions1293" target="_blank" class="footer__social-link">
+                    <i class="ri-youtube-line"><br>
+                        <div class="footer-text">@bigtonyproductions</div>
+                    </i>
+                </a>
+            </ul>
+            <span class="footer__copy">
+                &#169 2023 | Big Tony Productions | All Rights Reserved
+            </span>
+        </div>
+    </footer>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== EMAIL JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('uRtidt2Mu5XRhtoyy');
+        })();
+
+        const contactName = document.getElementById("contact-name"),
+            contactEmail = document.getElementById("contact-email"),
+            contactMessage = document.getElementById("contact-message")
+
+        // listen to the form submission
+        document
+            .getElementById("contact-form")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const serviceID = "service_moi5kfx";
+                const templateID = "template_29giai8";
+
+                // send the email here
+                emailjs.sendForm(serviceID, templateID, this).then(
+                    (response) => {
+                        // Show message and add color
+                        messageText.classList.add('color-blue')
+                        messageText.textContent = 'Message sent!'
+                    },
+                    (error) => {
+                        // Show message and add color
+                        messageText.classList.add('color-red')
+                        messageText.textContent = 'Message failed! Please try again.'
+                    }
+
+                );
+
+                contactName.value = '';
+                contactEmail.value = '';
+                contactMessage.value = '';
+
+            });
+    </script>
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
