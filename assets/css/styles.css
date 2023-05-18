@@ -4,6 +4,12 @@
 
 
 /* BASIC STYLES */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -50,28 +56,53 @@ img {
 }
 
 /* LANDING */
-.img-logo-landing {
-  width: 40%;
-  margin: 0 auto;
-  background-color: #fff;
+.landing-page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff;
 }
 
-.landing {
-  margin: 0 auto;
+.landing-container {
+  text-align: center;
 }
 
-.enter-link {
+.landing-logo {
+  display: block;
+  margin: 0 auto;
+  padding: 5%;
+  max-width: 80%;
+  height: auto;
+  animation: fade-in 1.5s ease-out forwards;
+}
+
+.enter-text {
+  color: #383838;
+  margin-top: 50px;
+  font-size: 20px;
   text-decoration: none;
   font-size: 3rem;
   font-family: 'Oswald', serif;
-  text-align: center;
   cursor: pointer;
-  color: #171717;
+  animation: fade-in 1.5s ease-out forwards;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.enter-link:hover {
-  color: #848484;
-  transition: 0.3s;
+.enter-text:hover {
+  transform: scale(1.1);
+  color: rgb(157, 157, 157);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* LOGO */
@@ -90,6 +121,8 @@ img {
 
 .logo-text {
   margin-left: 8px;
+  text-decoration: none;
+  color:#000
 }
 
 /* NAVBAR STYLES */
@@ -200,7 +233,7 @@ header label {
 }
 
 .about {
-  background-image: url('../img/tony-everywhere-multnomah-falls.png');
+  background-image: url('../img/tony-everywhere-multomah-falls.jpg');
   background-position: bottom;
   background-repeat: no-repeat;
 }
@@ -324,8 +357,6 @@ header label {
   }
 }
 
-
-
 .home-text {
   padding: 3rem;
   text-align: center;
@@ -345,6 +376,17 @@ header label {
 
 .color-blue {
   color: hsl(207, 56%, 45%)
+}
+
+/* ABOUT PAGE */
+.tony-bio {
+  padding: 3%;
+  margin: 0 auto;
+  margin-top: 3%;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.753); 
+  font-size: 0.9rem;
+  width: 77%;
 }
 
 /* FOOTER */
@@ -415,7 +457,7 @@ footer {
 }
 
 .bio-section {
-  background-image: url('../img/tony-everywhere-multnomah-falls.png');
+  background-image: url('../img/tony-everywhere-multomah-falls.jpg');
   background-position: bottom;
   background-repeat: no-repeat;
 }
@@ -425,6 +467,7 @@ footer {
   max-width: 100%;
   position: relative;
   margin: auto;
+  background-color: #000;
 }
 
 /* Hide the images by default */
@@ -516,7 +559,7 @@ footer {
 
 /* CONTACT PAGE */
 .contact-background {
-  background-image: url('../img/escaped-pilot.png');
+  background-image: url('../img/lego-photography-Escaped-Pilot.jpg');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -603,9 +646,16 @@ form button:hover {
   background-color: #949494;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices */
+@media screen and (orientation:landscape)
+and (min-device-width: 319px) 
+and (max-device-width: 897px) {
+  header .navbar ul li a {
+    font-size: 9px;
+  }
+}
 
+@media only screen and (max-width: 866px) {
   html {
     background-color: #fff;
     overflow-x: hidden;
@@ -616,29 +666,14 @@ form button:hover {
     position: relative;
   }
 
-  /* LANDING */
-  .img-logo-landing {
-    width: 90%;
-    margin: 0 auto;
-    background-color: #fff;
-    
-    margin: auto auto;
-  }
-
-  .enter-link {
-    text-decoration: none;
-    font-size: 3rem;
-    font-family: 'Oswald', serif;
-    text-align: center;
-    cursor: pointer;
-    color: #171717;
-    margin: auto;
-  }
-
   .img-logo img {
     padding: 0;
     margin: 0;
     margin-right: 10px;
+  }
+
+  .logo-text {
+    text-decoration: none;
   }
   
   .menu {
@@ -651,17 +686,18 @@ form button:hover {
   }
 
   header .navbar ul li a {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bolder;
     padding: 8px;
   }
 
   .slideshow-container {
-    margin-left: -100px;
+    background-color: #4d4d4d;
   }
 
   .slideshow-container .phone {
-    margin-left: -60px;
+    margin-left: -100px;
+    background-color: #4d4d4d;
   }
 
   .text {
@@ -691,6 +727,11 @@ form button:hover {
 
   .flex-item {
     width: 100%;
+  }
+
+  .tony-bio {
+    padding: 0;
+    margin: 20px auto;
   }
 
   .about {
@@ -742,12 +783,12 @@ form button:hover {
 
   .footer__list,
   .footer__social {
-    justify-content: space-evenly;
+    padding: 0;
     margin: 0 auto;
   }
 
   .footer-text {
-    display: none;
+    font-size: 0.55rem;
   }
 
   .footer__copy {
@@ -805,7 +846,6 @@ form button:hover {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width:991px) {
-
   header label {
     display: initial;
   }
@@ -851,6 +891,11 @@ form button:hover {
 
 /* For large devices */
 @media screen and (min-width: 1023px) {
+  .landing-logo {
+    max-width: 60%;
+    padding-top: 0;
+  }
+
   .footer__container {
     padding: 1rem 0 1rem;
   }
@@ -869,6 +914,10 @@ form button:hover {
 
 /* Extra large devices (large laptops and desktops, 2000px and up) */
 @media only screen and (min-width: 2000px) {
+  .landing-logo {
+    max-width: 90%;
+  }
+
   .about {
     width: 70%;
     margin: 0 auto;
@@ -878,17 +927,4 @@ form button:hover {
   .contact-background {
     background-position: 25% 75%;
   }
-}
-
-/* About page */
-
-
-.tony-bio {
-  padding: 3%;
-  margin: 0 auto;
-  margin-top: 3%;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.753); 
-  font-size: 0.9rem;
-  width: 77%;
 }
