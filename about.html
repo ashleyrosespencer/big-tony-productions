@@ -4,71 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home to any and all things I find fun, interesting, and
+  worthy of trying to get better at.">
 
     <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/ico/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/ico/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ico/android-chrome-512x512.png">
 
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick/slick-theme.css" />
 
     <title>Big Tony Productions</title>
 </head>
 
-<body class="">
-    <!--==================== HEADER ====================-->
-    <header>
-        <div class="img-logo">
-            <img src="assets/img/big-tony-productions-logo.png">
-            <a href="index.html" class="logo-text">BIG TONY PRODUCTIONS</a>
+<!--==================== HEADER ====================-->
+<div class="announcement-bar">
+    <span>What's new? Check out the <a href="https://youtu.be/JuoUtnABgQo" target="_blank">Alvord Desert Trip 2023</a>
+        video!</span>
+</div>
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="logo">
+            <img src="assets/img/big-tony-productions-logo.png" alt="Logo">
+            <span class="logo-text">BIG TONY PRODUCTIONS</span>
         </div>
-
-        <input type="checkbox" id="menu-bar">
-        <label for="menu-bar"><i class="ri-menu-line"></i></label>
-
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#">PHOTOGRAPHY</a>
-                    <ul>
-                        <li><a href="night-sky.html">NIGHT SKY</a></li>
-                        <li><a href="lego.html">LEGO</a></li>
-                        <li><a href="#">TRAVEL / LOCATION<i class="ri-arrow-drop-down-line"></i></a>
-                            <ul>
-                                <li><a href="columbia-river-gorge.html">COLUMBIA RIVER GORGE</a></li>
-                                <li><a href="crater-lake.html">CRATER LAKE</a></li>
-                                <li><a href="eastern-oregon.html">EASTERN OREGON</a></li>
-                                <li><a href="oregon-coast.html">OREGON COAST</a></li>
-                                <li><a href="portland.html">PORTLAND</a></li>
-                                <li><a href="washington.html">WASHINGTON</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="multifarious.html">MULTIFARIOUS</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">VIDEOGRAPHY</a>
-                    <ul>
-                        <li><a href="food.html">FOOD</a></li>
-                        <li><a href="health-and-fitness.html">HEALTH AND FITNESS</a></li>
-                        <li><a href="inspirational.html">INSPIRATIONAL</a></li>
-                        <li><a href="timelapse.html">TIMELAPSE</a></li>
-                        <li><a href="trailers.html">TRAILERS</a></li>
-                        <li><a href="travel.html">TRAVEL / MOTO VLOGS</a></li>
-                        <li><a href="wonders-in-the-mundane.html">WONDERS IN THE MUNDANE</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--==================== BIO ====================-->
-    <main class="about">
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <ul class="menu-items">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#">PHOTOGRAPHY <i class="ri-arrow-down-s-line"></i></a>
+                <ul class="submenu">
+                    <li><a href="night-sky.html">NIGHT SKY</a></li>
+                    <li><a href="lego.html">LEGO</a></li>
+                    <li class="dropdown">
+                        <a href="#">TRAVEL / LOCATION <i class="ri-arrow-right-s-line"></i></a>
+                        <ul class="submenu">
+                            <li><a href="columbia-river-gorge.html">COLUMBIA RIVER GORGE</a></li>
+                            <li><a href="central-oregon.html">CENTRAL OREGON</a></li>
+                            <li><a href="eastern-oregon.html">EASTERN OREGON</a></li>
+                            <li><a href="oregon-coast.html">OREGON COAST</a></li>
+                            <li><a href="portland.html">PORTLAND</a></li>
+                            <li><a href="washington.html">WASHINGTON</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="multifarious.html">MULTIFARIOUS</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">VIDEOGRAPHY <i class="ri-arrow-down-s-line"></i></a>
+                <ul class="submenu">
+                    <li><a href="food.html">FOOD</a></li>
+                    <li><a href="health-and-fitness.html">HEALTH AND FITNESS</a></li>
+                    <li><a href="inspirational.html">INSPIRATIONAL</a></li>
+                    <li><a href="timelapse.html">TIMELAPSE</a></li>
+                    <li><a href="trailers.html">TRAILERS</a></li>
+                    <li><a href="travel.html">TRAVEL / MOTO VLOGS</a></li>
+                    <li><a href="wonders-in-the-mundane.html">WONDERS IN THE MUNDANE</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+</nav>
+<!--==================== BIO ====================-->
+<main class="about">
+    <div class="bio-container">
         <div class="tony-bio">
             <h1 class="bio-title">TONY SPENCER: THE MAN, THE MYTH, THE LEGEND</h1>
             <p>As you might have guessed, my name's Tony. The 'Big Tony', well that's a
@@ -127,63 +141,69 @@
                 -Bruce Lee</p>
         </div>
         <div class="mobile">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
-    </main>
-    <!--==================== FOOTER ====================-->
-    <footer>
-        <div class="footer__container">
-            <ul class="footer__social">
-                <a href="https://www.instagram.com/bigtonyproductions/" target="_blank" class="footer__social-link">
-                    <i class="ri-instagram-line"><br>
-                        <div class="footer-text">@bigtonyproductions</div>
-                    </i>
-                </a>
+    </div>
+</main>
+<!--==================== FOOTER ====================-->
+<footer>
+    <div class="footer-container">
+        <div class="footer-social">
+            <a href="https://www.instagram.com/bigtonyproductions/" target="_blank" class="footer-social-link">
+                <i class="ri-instagram-line"></i>
+                <div class="footer-text">@bigtonyproductions</div>
+            </a>
 
-                <a href="https://www.instagram.com/bigtonyminifigs/" target="_blank" class="footer__social-link">
-                    <i class="ri-instagram-line"><br>
-                        <div class="footer-text">@bigtonyminifigs</div>
-                    </i>
-                </a>
+            <a href="https://www.instagram.com/bigtonyminifigs/" target="_blank" class="footer-social-link">
+                <i class="ri-instagram-line"></i>
+                <div class="footer-text">@bigtonyminifigs</div>
+            </a>
 
-                <a href="https://www.youtube.com/@bigtonyproductions1293" target="_blank" class="footer__social-link">
-                    <i class="ri-youtube-line"><br>
-                        <div class="footer-text">@bigtonyproductions</div>
-                    </i>
-                </a>
-            </ul>
-            <span class="footer__copy">
-                &#169 2023 | Big Tony Productions | All Rights Reserved
-            </span>
+            <a href="https://www.youtube.com/@bigtonyproductions1293" target="_blank" class="footer-social-link">
+                <i class="ri-youtube-line"></i>
+                <div class="footer-text">@bigtonyproductions</div>
+            </a>
         </div>
-    </footer>
+        <div class="footer-text">
+            <span>&#169; 2023 Big Tony Productions | All Rights Reserved |</span>
+            <span>Coded with love by <a href="https://ashleyshubin.com" target="_blank">Ashley Shubin</a></span>
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="assets/slick/slick/slick.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/glightbox.min.js"></script>
+<script type="text/javascript">
+    const lightbox = GLightbox({ loop: true });
+</script>
 </body>
 
 </html>
